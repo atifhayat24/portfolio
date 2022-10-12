@@ -1,0 +1,349 @@
+@import url(https://allfont.net/allfont.css?fonts=digital-7-mono);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Calibre","Inter","San Francisco","SF Pro Text",system-ui,sans-serif;                     
+
+                                                
+}
+:root {
+  --Heading:#5ff3d1;
+  --para: #777;
+  --text:#cbd5f5;
+  --para-tint: #e4e4e4;
+  --white:#cbd5f5;
+  --link: #5ff3d1;
+  --link-hover: #49c9b0;
+  --bg: #0a192f;
+  --bg-two: #0d203d;
+  --gradient: linear-gradient(0deg, #0a192f 0%,#0a192feb 100%);
+  --font-main:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+--font-secondary:'Roboto', Serif;
+--font-digit: 'Digital-7';
+}
+p{
+font-size: 1.2em;
+   color: var(--text);
+   line-height: 28px;
+}
+a{
+    font-size: 1em;
+       color: var(--link);
+       line-height: 28px;
+       cursor: pointer;
+    }
+    a:hover{
+        font-size: 1;
+           color: var(--link-hover);
+           line-height: 28px;
+        }
+    h1{
+font-size: 3.5em;
+color: var(--text);
+font-weight: 900;
+line-height: 1.2em;
+font-family: "Roboto", serif;
+}
+h2{
+    font-size: 3em;
+    color: var(--link);
+  font-weight: 800;
+  line-height: 1.4em;
+  font-family: var(--font-secondary);
+
+    }
+.overlay{
+ 
+    background-color: var(--bg-two);
+
+}
+span{
+color: #5fe5ca;
+font-size: 17px;
+font-family: 'Digital-7 Mono', arial;
+}
+.btn{
+color:var(--link);
+font-size: 18px;
+line-height:27px;
+padding: 7px 30px 7px 30px;
+background-color: var(--bg);
+border: 1px solid var(--link);
+border-radius: 3px;
+cursor: pointer;
+}
+
+.navBar{
+    background-color:var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 81px;
+    }
+
+.menu ol{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    align-content: flex-end;
+    align-self: center;
+
+    }
+.menu ol li{
+ 
+    color: var(--text);
+    font-size: 18px;
+
+
+}
+.menu ol li::marker{
+    color: #5fe5ca;
+    font-weight: 500;
+    font-family: 'Digital-7 Mono', arial;
+                                            
+}
+.main-div{
+display: flex;
+flex-direction: row;
+height: 500px;
+background-size: cover;
+background-attachment: fixed;
+align-items: center;
+align-self: center;
+justify-content: space-evenly;
+}
+.hero-banner{ background-image: url("herowebdev.jpg");
+}
+.hero-right{
+width: 60%
+}
+.hero-right p{
+
+    width: 58%;
+    text-align: justify;
+}
+
+/* Responsivness */
+@media only screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+    .hero-right {
+        width: 100%;
+        margin: 100px 15px 30px 20px;
+    }
+    .hero-right p{
+
+        width: 100%;
+        text-align: justify;
+    }
+    }
+    /* ----------------------- Hero Section Ends Here ----------------------- */
+    /* About Me */
+.about-me{
+display: flex;
+flex-direction: row;
+height: 600px;
+background-image: url("about-me-web.jpg");
+background-size: cover; 
+padding-top: 60px;
+}
+.about-me-right{
+    width: 63%;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+ margin-left: 260px;
+}
+.specialHeading h2{
+    color: var(--text);
+    font-size: 30px;
+    font-weight: 500;
+  font-family: var(--font-main);
+}
+.specialHeading h2::after {
+position: absolute;
+   margin:25px 0px 0px 20px;
+    overflow: hidden;
+    width: 22%;
+    height: 1px;
+    content: '\a0';
+    background-color:#7b7f8d9c;
+
+}
+.specialHeading span{
+
+color: var(--link);
+font-family: var(--font-digit);
+font-size: 30px;
+}
+.about-me-right{
+    text-align: justify;
+}
+.about-me-right p{
+    font-size: 1.2em;
+    width: 85%;
+    text-align: justify;
+    line-height: 1.6em;
+    
+    
+}
+.about-me-right p span{
+font-size: 1em;
+line-height: 1.6em;
+
+}
+.about-me-right ul li{
+
+    color: var(--text);
+    font-size: 1.2em;
+}
+.about-me-right ul li::marker{
+    color: var(--link);
+}
+.about-me-right ul.skills{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    margin: 0px 95px;
+}
+.about-me-left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 37%;
+    justify-content: flex-end;
+}
+.about-me-left img{
+    
+transform: scale(37%);
+filter: brightness( 39% ) contrast( 109% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+transition-duration: 1.2s;
+border-style: double;
+border-width: 0px 25px 25px 0px;
+border-color: var(--link)
+}
+.about-me-left img:hover{
+    filter: brightness( 90% ) contrast( 109% ) saturate( 100% ) blur( 0px ) hue-rotate( 0deg );
+    cursor: pointer;
+}
+
+/* Resposiveness About me*/
+@media only screen and (max-width: 600px) {
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        background-image: url(about-me-web.jpg);
+        background-size: cover;
+        padding-top: 60px;
+        height: 900px;
+        align-content: stretch;
+        align-items: center;
+    }
+    
+    .about-me-right {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+    .about-me-left{
+display: flex;
+margin-top: -250px;
+flex-direction: column;
+    }
+}
+
+/* ------------------------- Experience Section ------------------------- */
+.work{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 500px;
+background-image: url("herowebdev.jpg");
+background-attachment: fixed;
+}
+.work-inner{
+
+    background-color: var(--bg);
+    position: relative;
+    width: 60%;
+    height: 315px;
+    overflow: hidden;
+    border-radius: 2px;
+    display: flex;
+    box-shadow: 0px 4px 20px 1px rgba(3, 3 , 3, 0.5);
+ 
+}
+.work-inner .tabbuttons{
+
+flex-basis: 25%;
+padding: 10px 10px -6px 0px ;
+/* border-left: 2px solid #495670; */
+
+}
+.work-inner .tabcontents{
+flex-basis: 75%;
+/* 1 */
+padding: 20px 30px 20px 40px;
+font-size: 20px;
+
+}
+.tab{
+
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+}
+.tab .bttab{
+    padding: 20px;
+    background-color: var(--bg);
+   
+    border-left: 1px solid var(--para);
+    color: var(--link);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.tab .bttab:hover{
+    border-left: 2px solid var(--link);
+    background-color: var(--bg-two);
+}
+.tab .bttab:active,.bttab:focus{
+
+    border-left: 1px solid var(--link);
+      background-color: var(--bg-two);
+
+}
+.tabContentMain{
+display: flex;
+flex-basis: 75%;
+margin: 10px 20px 15px 40px;
+}
+.tabContentMain .tabcontent h2{
+    font-family: var(--font-digit);
+font-weight: 500;
+font-size: 35px;
+
+}
+.tabContentMain .tabcontent ul li{
+    font-size: 1.1em;
+color: var(--text);
+
+}
+.tabcontent ul li::marker{
+
+    color: var(--link);
+}
+.work .specialHeading{
+    margin: 0px 0px 16px -507px
+}
